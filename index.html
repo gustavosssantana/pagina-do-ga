@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mente Leve · Gestão da Ansiedade, Estresse e Burnout</title>
+<meta name="description" content="E-book prático e acolhedor para lidar melhor com a ansiedade, a tristeza e a sobrecarga emocional. Acesso imediato.">
+<meta name="theme-color" content="#F7F5F0">
+<meta property="og:title" content="Mente Leve · E-book de autocuidado emocional">
+<meta property="og:description" content="Um guia direto e acolhedor para organizar a mente e criar pequenos hábitos de autocuidado.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:#F7F5F0;color:#2B2A26;font-family:'Mulish',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;text-rendering:optimizeLegibility}
+  img{max-width:100%;display:block}
+  a{color:#2E5A41}
+  a:hover{color:#244A35}
+  ::selection{background:#D7E3D9;color:#244A35}
+  h1,h2,h3,p{text-wrap:pretty}
+  h1,h2{text-wrap:balance}
+
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  @keyframes breathe{0%,100%{transform:scale(.82);opacity:.45}50%{transform:scale(1.12);opacity:.12}}
+  @keyframes breatheDot{0%,100%{transform:scale(.7);opacity:.55}50%{transform:scale(1.25);opacity:1}}
+  @keyframes ctaGlow{0%,100%{box-shadow:0 14px 32px rgba(188,106,74,.30)}50%{box-shadow:0 16px 46px rgba(188,106,74,.52)}}
+  @keyframes pulseRing{0%{transform:scale(.9);opacity:.55}100%{transform:scale(2.1);opacity:0}}
+  @keyframes badgePop{0%{transform:scale(.6) rotate(-8deg);opacity:0}60%{transform:scale(1.12) rotate(-8deg)}100%{transform:scale(1) rotate(-8deg);opacity:1}}
+  .cta-glow{animation:ctaGlow 3.2s ease-in-out infinite}
+
+  [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+  [data-reveal].in{opacity:1;transform:none}
+  [data-reveal="left"]{transform:translateX(-44px)}
+  [data-reveal="right"]{transform:translateX(44px)}
+  [data-reveal="scale"]{transform:scale(.92)}
+  [data-reveal].in{transform:none}
+  .stagger>*:nth-child(2){transition-delay:.06s}
+  .stagger>*:nth-child(3){transition-delay:.12s}
+  .stagger>*:nth-child(4){transition-delay:.18s}
+  .stagger>*:nth-child(5){transition-delay:.24s}
+  .stagger>*:nth-child(6){transition-delay:.30s}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important}
+    [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+
+  .wrap{max-width:1200px;margin:0 auto}
+  .pad{padding-left:28px;padding-right:28px}
+  .btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;border-radius:44px;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+  .btn-green{background:#2E5A41;color:#F4F8F2;box-shadow:0 12px 30px rgba(46,90,65,.26)}
+  .btn-green:hover{background:#244A35;color:#F4F8F2;transform:translateY(-2px)}
+  .btn-terra{background:#BC6A4A;color:#FBF1EB}
+  .btn-terra:hover{background:#A4522F;color:#FBF1EB;transform:translateY(-2px)}
+  .btn-ghost{background:#fff;color:#2B2A26;border:1px solid #E0DACE}
+  .btn-ghost:hover{border-color:#2E5A41;color:#2E5A41}
+  .card-h{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card-h:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(40,55,45,.1);border-color:#CFE0D2}
+
+  .nav-link{text-decoration:none;color:#5A5D57;font-size:.92rem;font-weight:500}
+  .nav-link:hover{color:#2E5A41}
+  .hamburger{display:none}
+  .mobile-panel{display:none}
+  .sticky-buy{display:none}
+
+  @media(max-width:940px){
+    .desktop-nav{display:none}
+    .hamburger{display:inline-flex}
+    .mobile-panel{display:block}
+    .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+    .hero-copy{align-items:center;margin:0 auto}
+    .hero-selos,.hero-btns{justify-content:center}
+    .intro-grid,.transform-cols,.offer-grid,.about-grid{grid-template-columns:1fr!important}
+    .about-grid{text-align:center}
+    .pad{padding-left:20px;padding-right:20px}
+    section{padding-top:72px!important;padding-bottom:72px!important}
+    .hero-sec{padding-top:104px!important;padding-bottom:64px!important}
+  }
+  @media(max-width:760px){.sticky-buy{display:flex}}
+  @media(max-width:520px){
+    .hero-btns{flex-direction:column;width:100%}
+    .hero-btns>a{width:100%}
+    .pad{padding-left:16px;padding-right:16px}
+    body{padding-bottom:74px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:saturate(1.1) blur(10px);-webkit-backdrop-filter:saturate(1.1) blur(10px);background:rgba(247,245,240,.85);border-bottom:1px solid #E7E2D7">
+  <div class="wrap pad" style="height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="#topo" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <span style="width:30px;height:30px;border-radius:50%;background:#2E5A41;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto">
+        <span style="width:9px;height:9px;border-radius:50% 50% 50% 0;background:#C9DAC9;transform:rotate(45deg)"></span>
+      </span>
+      <span style="font-family:'Newsreader',serif;font-size:1.32rem;font-weight:500;color:#1E3D5C;letter-spacing:-.01em">Mente Leve</span>
+    </a>
+    <nav class="desktop-nav" style="display:flex;align-items:center;gap:30px">
+      <a class="nav-link" href="#conteudo">O que você aprende</a>
+      <a class="nav-link" href="#paraquem">Para quem é</a>
+      <a class="nav-link" href="#beneficios">Benefícios</a>
+      <a class="nav-link" href="#depoimentos">Depoimentos</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="#oferta" class="btn btn-green" style="padding:11px 20px;font-size:.9rem;white-space:nowrap">Quero o e-book</a>
+      <button class="hamburger" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" style="align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #E0DACE;background:#FCFBF8;border-radius:12px;cursor:pointer;padding:0">
+        <span style="display:block;width:18px;height:1.6px;background:#2B2A26;box-shadow:0 6px 0 #2B2A26,0 -6px 0 #2B2A26"></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel" style="overflow:hidden;max-height:0;transition:max-height .38s ease;background:rgba(247,245,240,.98);border-bottom:1px solid #E7E2D7">
+    <div class="pad" style="padding-top:12px;padding-bottom:20px;display:flex;flex-direction:column">
+      <a href="#conteudo" class="mlink" style="text-decoration:none;color:#3A3D37;font-weight:600;padding:12px 0;border-bottom:1px solid #ECE7DC">O que você aprende</a>
+      <a href="#paraquem" class="mlink" style="text-decoration:none;color:#3A3D37;font-weight:600;padding:12px 0;border-bottom:1px solid #ECE7DC">Para quem é</a>
+      <a href="#beneficios" class="mlink" style="text-decoration:none;color:#3A3D37;font-weight:600;padding:12px 0;border-bottom:1px solid #ECE7DC">Benefícios</a>
+      <a href="#depoimentos" class="mlink" style="text-decoration:none;color:#3A3D37;font-weight:600;padding:12px 0;border-bottom:1px solid #ECE7DC">Depoimentos</a>
+      <a href="#faq" class="mlink" style="text-decoration:none;color:#3A3D37;font-weight:600;padding:12px 0">Perguntas frequentes</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="topo" class="hero-sec" style="scroll-margin-top:80px;position:relative;padding:128px 28px 90px;background:linear-gradient(170deg,#EAF1F2 0%,#F2F1EA 46%,#F7F5F0 100%);overflow:hidden">
+  <div style="position:absolute;top:8%;left:-4%;width:340px;height:340px;border-radius:50%;border:1.5px solid #BFD3C4;animation:breathe 9s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:absolute;top:14%;left:-1%;width:220px;height:220px;border-radius:50%;border:1.5px solid #AFC8E0;animation:breathe 9s ease-in-out infinite 1.2s;pointer-events:none"></div>
+  <div style="position:absolute;bottom:6%;right:-3%;width:300px;height:300px;border-radius:50%;border:1.5px solid #D8C2B6;animation:breathe 11s ease-in-out infinite .6s;pointer-events:none"></div>
+  <div class="hero-grid wrap" style="position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center">
+    <div class="hero-copy" data-reveal style="display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+      <span style="display:inline-flex;align-items:center;gap:9px;background:#E7EEE7;color:#2E5A41;padding:8px 16px;border-radius:40px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase">
+        <span style="width:7px;height:7px;border-radius:50%;background:#2E5A41;animation:breatheDot 3.4s ease-in-out infinite"></span>
+        Guia prático de autocuidado
+      </span>
+      <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(2.1rem,4.6vw,3.85rem);line-height:1.07;letter-spacing:-.02em;color:#1E3D5C;margin:0">
+        Aprenda a lidar melhor com a <span style="color:#2E5A41;font-style:italic">ansiedade</span>, a tristeza e os pensamentos que pesam todos os dias
+      </h1>
+      <p style="font-size:1.1rem;line-height:1.65;color:#5A5D57;max-width:520px;margin:0">
+        Um e-book direto, acolhedor e prático para ajudar você a entender seus sentimentos, reduzir a sobrecarga emocional e construir pequenos hábitos de autocuidado no dia a dia.
+      </p>
+      <div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:2px">
+        <a href="#oferta" class="btn btn-green" style="padding:16px 30px;font-size:1.02rem">Quero começar agora</a>
+        <a href="#conteudo" class="btn btn-ghost" style="padding:16px 28px;font-size:1.02rem">Ver o que tem no e-book</a>
+      </div>
+      <div class="hero-selos" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:6px" id="selos"></div>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:4px;flex-wrap:wrap">
+        <div style="display:flex">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=70&crop=faces&fit=crop" alt="" loading="lazy" width="38" height="38" style="width:38px;height:38px;border:2px solid #F2F1EA;border-radius:50%;object-fit:cover">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=70&crop=faces&fit=crop" alt="" loading="lazy" width="38" height="38" style="width:38px;height:38px;border:2px solid #F2F1EA;border-radius:50%;object-fit:cover;margin-left:-12px">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=70&crop=faces&fit=crop" alt="" loading="lazy" width="38" height="38" style="width:38px;height:38px;border:2px solid #F2F1EA;border-radius:50%;object-fit:cover;margin-left:-12px">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&q=70&crop=faces&fit=crop" alt="" loading="lazy" width="38" height="38" style="width:38px;height:38px;border:2px solid #F2F1EA;border-radius:50%;object-fit:cover;margin-left:-12px">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;text-align:left">
+          <div style="display:flex;gap:3px;align-items:center">
+            <span style="color:#E0A03A;font-size:.95rem;letter-spacing:1px">★★★★★</span>
+            <span style="font-size:.85rem;font-weight:700;color:#2B2A26;margin-left:4px">4,9/5</span>
+          </div>
+          <span style="font-size:.85rem;color:#6A6D67">Mais de <strong style="color:#2E5A41">2.000 leitores</strong> já começaram</span>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="scale" style="display:flex;justify-content:center;perspective:1700px">
+      <div style="position:relative;transform-style:preserve-3d;animation:float 7.5s ease-in-out infinite">
+        <div style="position:absolute;bottom:-34px;left:8%;right:8%;height:44px;background:radial-gradient(ellipse,rgba(40,55,45,.26),transparent 72%);filter:blur(7px)"></div>
+        <div style="position:relative;transform:rotateY(-19deg) rotateX(3deg);transform-style:preserve-3d">
+          <div style="position:absolute;top:5px;bottom:5px;right:-13px;width:13px;background:linear-gradient(#EDE9DF,#CFC9BB);transform:rotateY(20deg);transform-origin:left;border-radius:0 2px 2px 0"></div>
+          <img src="assets/ebook-cover.jpg" alt="Capa do e-book Gestão da Ansiedade, Estresse e Burnout" width="330" height="495" style="width:clamp(230px,30vw,330px);height:auto;border-radius:4px 8px 8px 4px;box-shadow:-22px 26px 50px rgba(30,45,60,.34);border-left:2px solid rgba(255,255,255,.35)">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:96px;padding-bottom:96px;background:#F2EFE7">
+  <div style="max-width:980px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Você não está sozinho</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.12;color:#1E3D5C;margin:14px 0 0">Você sente que sua mente não desliga?</h2>
+    <p style="font-size:1.1rem;line-height:1.75;color:#5A5D57;max-width:720px;margin:22px auto 0">
+      Às vezes, o cansaço não é só físico. É mental. São pensamentos que não param, preocupação constante, falta de energia, dificuldade para começar o dia, sensação de culpa, irritação, medo do futuro e aquela vontade de simplesmente sumir por algumas horas.
+    </p>
+  </div>
+  <div class="stagger" id="painCards" style="max-width:1080px;margin:54px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px"></div>
+  <div data-reveal style="max-width:760px;margin:48px auto 0;text-align:center;background:linear-gradient(160deg,#E7EEE7,#EAF1F2);border-radius:22px;padding:38px 34px;border:1px solid #DCE6DC">
+    <p style="margin:0;font-family:'Newsreader',serif;font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.45;color:#244A35;font-style:italic">
+      “Esse e-book foi criado para ser um ponto de partida simples, humano e prático para quem precisa respirar, organizar a mente e começar a se cuidar com mais gentileza.”
+    </p>
+  </div>
+</section>
+
+<!-- TRANSFORMAÇÃO -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:96px;padding-bottom:96px;background:linear-gradient(180deg,#1E3D5C 0%,#274A4A 100%);position:relative;overflow:hidden">
+  <div style="position:absolute;top:-120px;right:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(199,218,201,.18),transparent 70%);pointer-events:none"></div>
+  <div style="max-width:920px;margin:0 auto;text-align:center;position:relative" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9DBBA3">A jornada</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#F4F2EC;margin:14px 0 0">O objetivo não é virar outra pessoa.<br>É voltar a se sentir <span style="font-style:italic;color:#C9DAC9">você</span>.</h2>
+  </div>
+  <div class="transform-cols" style="max-width:980px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative">
+    <div data-reveal style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:34px 30px">
+      <span style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A9B7C4">Como você está agora</span>
+      <div id="before" style="display:flex;flex-direction:column;gap:14px;margin-top:22px"></div>
+    </div>
+    <div data-reveal style="background:linear-gradient(165deg,#EAF3EC,#F4F6EF);border-radius:22px;padding:34px 30px;box-shadow:0 24px 50px rgba(0,0,0,.22)">
+      <span style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2E5A41">Com prática e constância</span>
+      <div id="after" style="display:flex;flex-direction:column;gap:14px;margin-top:22px"></div>
+    </div>
+  </div>
+  <p data-reveal style="text-align:center;color:#9DBBA3;font-size:.95rem;margin:30px auto 0;max-width:620px">O e-book não resolve tudo — ele oferece ferramentas práticas para apoiar esse processo, no seu ritmo.</p>
+</section>
+
+<!-- O QUE É -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#F7F5F0">
+  <div class="intro-grid" style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center">
+    <div data-reveal style="display:flex;justify-content:center;perspective:1600px">
+      <div style="position:relative;animation:float 8s ease-in-out infinite">
+        <div style="position:absolute;bottom:-28px;left:10%;right:10%;height:38px;background:radial-gradient(ellipse,rgba(40,55,45,.2),transparent 72%);filter:blur(6px)"></div>
+        <img src="assets/ebook-cover.jpg" alt="Capa do e-book" width="300" height="450" style="width:clamp(220px,26vw,300px);height:auto;border-radius:6px;box-shadow:0 26px 54px rgba(30,45,60,.28)">
+      </div>
+    </div>
+    <div data-reveal style="display:flex;flex-direction:column;align-items:flex-start;gap:22px">
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">O e-book</span>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.8rem,3.2vw,2.7rem);line-height:1.16;color:#1E3D5C;margin:0">Um guia para organizar a mente quando tudo parece demais</h2>
+      <p style="font-size:1.08rem;line-height:1.7;color:#5A5D57;margin:0">
+        Este e-book reúne reflexões, explicações simples e exercícios práticos para ajudar você a entender melhor a ansiedade, a tristeza, o estresse e os ciclos de pensamentos negativos. A proposta é ajudar você a criar pequenos momentos de cuidado, clareza e pausa dentro da rotina.
+      </p>
+      <div id="ebookInfo" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px 24px;width:100%;margin-top:4px"></div>
+      <a href="#oferta" class="btn btn-green" style="margin-top:8px;padding:15px 30px;font-size:1rem">Quero acessar agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section id="conteudo" class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#F2EFE7">
+  <div style="max-width:900px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Conteúdo</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 0">O que você vai encontrar dentro do e-book</h2>
+    <p style="font-size:1.05rem;line-height:1.65;color:#5A5D57;max-width:600px;margin:18px auto 0">Dez capítulos curtos, em linguagem acolhedora, com reflexões e exercícios para fazer no seu tempo.</p>
+  </div>
+  <div class="stagger" id="modules" style="max-width:1120px;margin:52px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px"></div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios" class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#F7F5F0">
+  <div style="max-width:900px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Benefícios</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 0">Como esse e-book pode te ajudar</h2>
+  </div>
+  <div class="stagger" id="benefits" style="max-width:980px;margin:48px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px"></div>
+  <div data-reveal class="intro-grid" style="max-width:920px;margin:48px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;text-align:left">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=72&fit=crop" alt="Pessoa escrevendo no diário" loading="lazy" style="width:100%;height:clamp(340px,44vw,480px);object-fit:cover;border-radius:22px;box-shadow:0 24px 50px rgba(40,55,45,.16)">
+    <div>
+      <p style="font-family:'Newsreader',serif;font-size:clamp(1.25rem,2.2vw,1.7rem);font-style:italic;color:#244A35;line-height:1.4;margin:0 0 8px">“Não se trata de uma solução mágica. Se trata de um começo possível.”</p>
+      <p style="font-size:1rem;color:#5A5D57;line-height:1.6;margin:0 0 24px">Pequenas práticas, repetidas com gentileza, ajudam a criar mais clareza no dia a dia.</p>
+      <a href="#oferta" class="btn btn-green cta-glow" style="padding:15px 30px;font-size:1rem">Quero começar hoje</a>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTO -->
+<section style="position:relative;min-height:clamp(360px,52vw,540px);display:flex;align-items:center;overflow:hidden;background:#1E3D5C">
+  <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1500&q=72&fit=crop" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,40,60,.8) 0%,rgba(20,40,60,.44) 50%,rgba(20,40,60,.15) 100%);pointer-events:none"></div>
+  <div data-reveal="left" class="pad wrap" style="position:relative;width:100%">
+    <div style="max-width:560px">
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C9DAC9">Respire fundo</span>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.14;color:#FBF9F3;margin:14px 0 16px">Você não precisa carregar tudo sozinho.</h2>
+      <p style="font-size:1.08rem;line-height:1.6;color:#DCE3E8;margin:0">Entender o que você sente já é parte do caminho. Comece com um pequeno passo possível — hoje.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section id="paraquem" class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:linear-gradient(170deg,#E7EEE7,#EAF1F2)">
+  <div style="max-width:860px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Para quem é</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 0">Esse e-book é para você se…</h2>
+  </div>
+  <div class="stagger" id="whoFor" style="max-width:880px;margin:46px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px"></div>
+  <div data-reveal style="max-width:740px;margin:40px auto 0;display:flex;align-items:flex-start;gap:16px;background:#FCFBF8;border:1px solid #E6CFC2;border-left:4px solid #BC6A4A;border-radius:16px;padding:24px 26px">
+    <span style="flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#F0E0D7;display:inline-flex;align-items:center;justify-content:center;margin-top:1px"><span style="color:#BC6A4A;font-weight:800">i</span></span>
+    <p style="margin:0;font-size:1rem;line-height:1.6;color:#4A4D47"><strong style="color:#A4522F">Importante:</strong> Esse e-book não substitui acompanhamento psicológico ou médico. Ele é um material de apoio, reflexão e autocuidado.</p>
+  </div>
+</section>
+
+<!-- RECEBE -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#1E3D5C;position:relative;overflow:hidden">
+  <div style="position:absolute;bottom:-140px;left:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(199,218,201,.14),transparent 70%);pointer-events:none"></div>
+  <div style="max-width:1080px;margin:0 auto;position:relative">
+    <div data-reveal style="text-align:center;margin-bottom:46px">
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9DBBA3">Acesso imediato</span>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#F4F2EC;margin:14px 0 0">Ao adquirir hoje, você recebe</h2>
+    </div>
+    <div class="stagger" id="receive" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-bottom:40px"></div>
+    <div data-reveal style="text-align:center;margin:18px 0 24px">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:#BC6A4A;color:#FBF1EB;padding:8px 18px;border-radius:30px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Bônus inclusos</span>
+    </div>
+    <div class="stagger" id="bonuses" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px"></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#F7F5F0">
+  <div class="about-grid" style="max-width:980px;margin:0 auto;display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:center">
+    <div data-reveal="left" style="display:flex;justify-content:center">
+      <div style="position:relative;width:210px;height:210px">
+        <div style="position:absolute;inset:-14px;border-radius:50%;border:1.5px solid #C9DAC9;animation:breathe 8s ease-in-out infinite;pointer-events:none"></div>
+        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=420&q=72&crop=faces&fit=crop" alt="Projeto Mente Leve" loading="lazy" style="width:210px;height:210px;border-radius:50%;object-fit:cover;border:1px solid #DCE6DC;box-shadow:0 18px 40px rgba(40,55,45,.16)">
+      </div>
+    </div>
+    <div data-reveal style="display:flex;flex-direction:column;align-items:flex-start;gap:18px">
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Sobre o material</span>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.16;color:#1E3D5C;margin:0">Criado para ser simples, humano e prático</h2>
+      <p style="font-size:1.08rem;line-height:1.7;color:#5A5D57;margin:0">
+        Este material foi desenvolvido com foco em linguagem acessível, exercícios práticos e acolhimento. A ideia é oferecer uma leitura que não julga, não pressiona e não exige perfeição. Apenas conduz você por um caminho mais organizado de autocuidado emocional.
+      </p>
+      <p style="font-size:.98rem;color:#7A7D77;margin:0;font-style:italic">— Projeto Mente Leve · conteúdo de bem-estar emocional</p>
+      <a href="#oferta" class="btn btn-green" style="margin-top:6px;padding:14px 28px;font-size:1rem">Conhecer o e-book</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:#F2EFE7">
+  <div style="max-width:900px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Prova social</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 0">Pessoas que começaram por pequenos passos</h2>
+  </div>
+  <div class="stagger" id="testimonials" style="max-width:1080px;margin:50px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px"></div>
+</section>
+
+<!-- OFERTA -->
+<section id="oferta" class="pad" style="scroll-margin-top:80px;padding-top:100px;padding-bottom:100px;background:linear-gradient(175deg,#EAF1F2,#F7F5F0)">
+  <div style="max-width:920px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">A oferta</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 8px">Comece hoje com um passo simples</h2>
+    <p style="font-size:1.05rem;line-height:1.65;color:#5A5D57;max-width:600px;margin:0 auto">Você não precisa esperar a vida ficar perfeita para começar a se cuidar. Um pequeno passo hoje já pode ser o início de uma rotina mais leve.</p>
+  </div>
+  <div data-reveal class="offer-grid" style="max-width:920px;margin:46px auto 0;display:grid;grid-template-columns:.85fr 1.15fr;background:#FCFBF8;border:1px solid #E6E1D5;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(30,45,60,.14)">
+    <div style="position:relative;background:linear-gradient(165deg,#E7EEE7,#DCE8EC);display:flex;align-items:center;justify-content:center;padding:40px 24px">
+      <span style="position:absolute;top:18px;left:18px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:74px;height:74px;border-radius:50%;background:#BC6A4A;color:#FBF1EB;font-weight:800;line-height:1;box-shadow:0 8px 20px rgba(188,106,74,.4);animation:badgePop .6s ease-out both"><span style="font-size:1.4rem">65%</span><span style="font-size:.6rem;letter-spacing:.08em;margin-top:2px">OFF</span></span>
+      <div style="position:relative;animation:float 7.5s ease-in-out infinite">
+        <div style="position:absolute;bottom:-22px;left:10%;right:10%;height:30px;background:radial-gradient(ellipse,rgba(40,55,45,.22),transparent 72%);filter:blur(6px)"></div>
+        <img src="assets/ebook-cover.jpg" alt="Capa do e-book" width="200" height="300" style="width:200px;height:auto;border-radius:5px;box-shadow:0 22px 44px rgba(30,45,60,.3)">
+      </div>
+    </div>
+    <div style="padding:40px 34px;display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:#E7EEE7;color:#2E5A41;padding:7px 15px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:50%;background:#2E5A41;animation:breatheDot 3s ease-in-out infinite"></span>Acesso imediato</span>
+      <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:1.5rem;color:#1E3D5C;margin:0">Gestão da Ansiedade, Estresse e Burnout</h3>
+      <div id="offerIncludes" style="display:flex;flex-direction:column;gap:9px;width:100%"></div>
+      <div style="width:100%;background:#F4F1E9;border:1px dashed #D8C2B6;border-radius:14px;padding:14px 16px;margin-top:4px">
+        <div style="display:flex;justify-content:space-between;font-size:.9rem;color:#6A6D67;margin-bottom:4px"><span>E-book completo + exercícios</span><span>R$ 67</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.9rem;color:#6A6D67"><span>4 bônus inclusos</span><span style="color:#2E5A41;font-weight:700">Grátis</span></div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:12px;margin-top:8px">
+        <span style="font-size:1.05rem;color:#A5A89F;text-decoration:line-through">R$ 67</span>
+        <span style="font-family:'Newsreader',serif;font-size:3rem;font-weight:500;color:#2E5A41;line-height:1">R$ 23,69</span>
+        <span style="font-size:.9rem;color:#7A7D77">à vista</span>
+      </div>
+      <span style="display:inline-flex;align-items:center;gap:7px;font-size:.84rem;font-weight:600;color:#A4522F;background:#F6E7DF;padding:6px 13px;border-radius:30px"><span style="width:6px;height:6px;border-radius:50%;background:#BC6A4A;animation:breatheDot 2.6s ease-in-out infinite"></span>Preço de lançamento — por tempo limitado</span>
+      <a href="https://pay.kiwify.com.br/qQSPzAA" target="_blank" rel="noopener" class="btn btn-terra cta-glow" style="width:100%;padding:18px 30px;font-size:1.08rem;font-weight:800">Quero acessar o e-book agora</a>
+      <div id="offerSeals" style="display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:4px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:80px;padding-bottom:80px;background:#F7F5F0">
+  <div data-reveal style="max-width:680px;margin:0 auto;text-align:center;background:#FCFBF8;border:1px solid #DCE6DC;border-radius:24px;padding:44px 36px">
+    <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:#E7EEE7;margin-bottom:18px">
+      <span style="display:block;width:26px;height:30px;border:2.5px solid #2E5A41;border-radius:50% 50% 50% 50%/30% 30% 70% 70%"></span>
+    </span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:1.7rem;color:#1E3D5C;margin:0 0 12px">Compra segura · 7 dias de garantia</h2>
+    <p style="font-size:1.05rem;line-height:1.65;color:#5A5D57;margin:0">Você tem 7 dias de garantia para acessar o material com tranquilidade. Se sentir que o conteúdo não é para você, basta solicitar o reembolso dentro do prazo.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pad" style="scroll-margin-top:80px;padding-top:96px;padding-bottom:96px;background:#F2EFE7">
+  <div style="max-width:760px;margin:0 auto;text-align:center" data-reveal>
+    <span style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7A9A80">Perguntas frequentes</span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.14;color:#1E3D5C;margin:14px 0 0">Ainda com dúvidas?</h2>
+  </div>
+  <div data-reveal id="faq-list" style="max-width:760px;margin:44px auto 0;background:#FCFBF8;border:1px solid #EAE5D9;border-radius:20px;overflow:hidden"></div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="pad" style="scroll-margin-top:80px;padding-top:110px;padding-bottom:110px;background:linear-gradient(160deg,#F4E9DD 0%,#EAF1F2 55%,#E7EEE7 100%);position:relative;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1500&q=72&fit=crop" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5">
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(244,233,221,.7),rgba(231,238,231,.78));pointer-events:none"></div>
+  <div style="position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(244,213,180,.5),transparent 65%);pointer-events:none"></div>
+  <div data-reveal="scale" style="position:relative;max-width:660px;margin:0 auto;text-align:center;background:rgba(255,255,255,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);border-radius:28px;padding:54px 32px;box-shadow:0 30px 60px rgba(120,100,80,.16)">
+    <span style="display:inline-flex;width:54px;height:54px;border-radius:50%;border:1.5px solid #BC6A4A;align-items:center;justify-content:center;margin-bottom:22px;position:relative"><span style="position:absolute;inset:0;border-radius:50%;border:1.5px solid #BC6A4A;animation:pulseRing 2.6s ease-out infinite"></span><span style="width:14px;height:14px;border-radius:50%;background:#BC6A4A;animation:breatheDot 3.4s ease-in-out infinite"></span></span>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(1.9rem,3.8vw,3.1rem);line-height:1.12;color:#1E3D5C;margin:0 0 16px">Você merece se tratar com mais calma</h2>
+    <p style="font-size:1.1rem;line-height:1.65;color:#5A5D57;margin:0 auto 26px;max-width:480px">Comece com uma leitura simples, humana e prática para entender melhor seus sentimentos e construir pequenos passos de autocuidado.</p>
+    <div style="display:inline-flex;align-items:baseline;gap:10px;margin-bottom:22px"><span style="font-size:1rem;color:#A5A89F;text-decoration:line-through">R$ 67</span><span style="font-family:'Newsreader',serif;font-size:2rem;color:#2E5A41;font-weight:500">R$ 23,69</span></div>
+    <div><a href="https://pay.kiwify.com.br/qQSPzAA" target="_blank" rel="noopener" class="btn btn-terra cta-glow" style="padding:18px 38px;font-size:1.1rem;font-weight:800">Quero começar agora</a></div>
+    <p style="margin:18px 0 0;font-size:.9rem;color:#7A7D77">Acesso imediato · 7 dias de garantia · Pagamento seguro</p>
+    <p style="margin:8px 0 0;font-size:.92rem;color:#7A7D77;font-style:italic">Respire. Escreva. Entenda. Recomece.</p>
+  </div>
+</section>
+
+<!-- AVISO -->
+<section class="pad" style="padding-top:40px;padding-bottom:40px;background:#1E3D5C">
+  <div style="max-width:840px;margin:0 auto;display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px 26px">
+    <span style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(201,218,201,.2);display:inline-flex;align-items:center;justify-content:center;color:#C9DAC9;font-weight:800;margin-top:1px">!</span>
+    <p style="margin:0;font-size:.92rem;line-height:1.6;color:#B8C2CC">
+      Este material tem finalidade educativa e de autocuidado. Ele não substitui diagnóstico, tratamento psicológico, psiquiátrico ou orientação médica. Caso você esteja em sofrimento intenso, pensamentos de autoagressão ou crise emocional, procure ajuda profissional ou atendimento de emergência. No Brasil, você pode ligar para o <strong style="color:#E4E9EC">CVV — 188</strong> (24h, gratuito).
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pad" style="background:#16304A;padding-top:54px;padding-bottom:36px">
+  <div style="max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)">
+    <div style="max-width:300px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <span style="width:28px;height:28px;border-radius:50%;background:#2E5A41;display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:50% 50% 50% 0;background:#C9DAC9;transform:rotate(45deg)"></span></span>
+        <span style="font-family:'Newsreader',serif;font-size:1.25rem;color:#F4F2EC">Mente Leve</span>
+      </div>
+      <p style="margin:0;font-size:.9rem;line-height:1.6;color:#90A0AE">Conteúdo de bem-estar emocional e autocuidado. Pequenos passos para uma rotina mais leve.</p>
+    </div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6E8090;margin-bottom:4px">Navegação</span>
+        <a href="#conteudo" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">O que você aprende</a>
+        <a href="#paraquem" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">Para quem é</a>
+        <a href="#faq" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">FAQ</a>
+        <a href="#oferta" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">Adquirir</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6E8090;margin-bottom:4px">Legal</span>
+        <a href="#" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">Política de privacidade</a>
+        <a href="#" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">Termos de uso</a>
+        <a href="#" style="text-decoration:none;color:#B8C2CC;font-size:.92rem">Contato</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1080px;margin:24px auto 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
+    <p style="margin:0;font-size:.84rem;color:#6E8090">© 2026 Mente Leve. Todos os direitos reservados.</p>
+    <p style="margin:0;font-size:.84rem;color:#6E8090;max-width:520px;text-align:right">Material educativo de autocuidado — não substitui acompanhamento psicológico ou médico.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BUY -->
+<div class="sticky-buy" style="position:fixed;bottom:0;left:0;right:0;z-index:90;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(252,251,248,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #E7E2D7;box-shadow:0 -6px 20px rgba(40,55,45,.08)">
+  <div style="display:flex;flex-direction:column;line-height:1.1">
+    <span style="font-size:.74rem;color:#9A9D97;text-decoration:line-through">R$ 67</span>
+    <span style="font-family:'Newsreader',serif;font-size:1.35rem;font-weight:600;color:#2E5A41">R$ 23,69</span>
+  </div>
+  <a href="https://pay.kiwify.com.br/qQSPzAA" target="_blank" rel="noopener" class="btn btn-terra cta-glow" style="flex:1;padding:15px 18px;font-size:1rem;font-weight:800">Quero o e-book</a>
+</div>
+
+<script>
+(function(){
+  var check = '<span style="display:block;width:9px;height:5px;border-left:2px solid #2E5A41;border-bottom:2px solid #2E5A41;transform:rotate(-45deg) translate(0,-1px)"></span>';
+  var checkLight = '<span style="display:block;width:9px;height:5px;border-left:2px solid #EAF3EC;border-bottom:2px solid #EAF3EC;transform:rotate(-45deg) translate(0,-1px)"></span>';
+  var checkNavy = '<span style="display:block;width:9px;height:5px;border-left:2px solid #1E3D5C;border-bottom:2px solid #1E3D5C;transform:rotate(-45deg) translate(0,-1px)"></span>';
+
+  function fill(id, html){ var el=document.getElementById(id); if(el) el.innerHTML=html; }
+
+  var selos = ['Leitura simples e prática','Exercícios guiados','Acesso imediato','Material digital'];
+  fill('selos', selos.map(function(s){return '<span style="display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:600;color:#4A4D47;background:rgba(255,255,255,.7);border:1px solid #E7E2D7;padding:7px 13px;border-radius:30px"><span style="width:6px;height:6px;border-radius:50%;background:#BC6A4A"></span>'+s+'</span>';}).join(''));
+
+  var painCards = ['Você acorda cansado mesmo depois de dormir','Sua cabeça fica acelerada antes de dormir','Pequenas tarefas parecem enormes','Você sente culpa por não conseguir render','Você se cobra demais o tempo todo','Você sente que perdeu o controle da rotina','Você quer melhorar, mas não sabe por onde começar','Você sente que ninguém entende o que está acontecendo'];
+  fill('painCards', painCards.map(function(c){return '<div data-reveal class="card-h" style="display:flex;align-items:flex-start;gap:15px;background:#FCFBF8;border:1px solid #EAE5D9;border-radius:18px;padding:22px"><span style="position:relative;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:#E7EEE7;display:inline-flex;align-items:center;justify-content:center;margin-top:2px"><span style="width:9px;height:9px;border-radius:50%;background:#7A9A80"></span></span><p style="margin:0;font-size:1rem;line-height:1.55;color:#3A3D37;font-weight:500">'+c+'</p></div>';}).join(''));
+
+  var before=['Mente acelerada','Cansaço emocional','Rotina desorganizada','Pensamentos negativos','Falta de clareza','Sensação de sobrecarga'];
+  fill('before', before.map(function(b){return '<div style="display:flex;align-items:center;gap:13px"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1.5px solid #8FA0AD;display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:1.6px;background:#8FA0AD"></span></span><span style="color:#D5DCE2;font-size:1rem">'+b+'</span></div>';}).join(''));
+
+  var after=['Mais clareza sobre o que sente','Mais consciência dos pensamentos','Rotina um pouco mais leve','Pequenos hábitos de autocuidado','Exercícios para momentos difíceis','Mais espaço para pausar e respirar'];
+  fill('after', after.map(function(a){return '<div style="display:flex;align-items:center;gap:13px"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#2E5A41;display:inline-flex;align-items:center;justify-content:center">'+checkLight+'</span><span style="color:#2B3A30;font-size:1rem;font-weight:500">'+a+'</span></div>';}).join(''));
+
+  var ebookInfo=['Formato digital (PDF)','Acesso imediato','Leitura simples','Linguagem acolhedora','Exercícios práticos','Celular, tablet ou PC'];
+  fill('ebookInfo', ebookInfo.map(function(i){return '<div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#E7EEE7;display:inline-flex;align-items:center;justify-content:center">'+check+'</span><span style="font-size:.96rem;color:#3A3D37;font-weight:500">'+i+'</span></div>';}).join(''));
+
+  var modules=[['01','Entendendo a ansiedade','Uma explicação simples sobre como a ansiedade aparece no corpo, nos pensamentos e na rotina.'],['02','Depressão e desânimo','Reflexões sobre tristeza persistente, falta de energia, culpa e dificuldade de agir.'],['03','Pensamentos acelerados','Como observar os pensamentos sem se afundar neles.'],['04','Respiração e pausa','Exercícios simples para momentos de sobrecarga emocional.'],['05','Rotina emocional','Como criar pequenos hábitos que trazem mais estrutura para o dia.'],['06','Diário de pensamentos','Exercícios de escrita para organizar sentimentos e identificar padrões.'],['07','Autocobrança e culpa','Reflexões para lidar melhor com a pressão interna.'],['08','Sono, corpo e mente','Cuidados simples que podem contribuir para uma rotina mais equilibrada.'],['09','Pequenas metas','Como começar devagar, sem se cobrar perfeição.'],['10','Plano de autocuidado','Um modelo prático para você montar seu próprio plano de cuidado diário.']];
+  fill('modules', modules.map(function(m){return '<div data-reveal class="card-h" style="position:relative;background:#FCFBF8;border:1px solid #EAE5D9;border-radius:20px;padding:28px 26px;overflow:hidden"><span style="position:absolute;top:14px;right:18px;font-family:\'Newsreader\',serif;font-size:3.4rem;font-weight:300;color:#E3EAE3;line-height:1">'+m[0]+'</span><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:#E7EEE7;margin-bottom:16px"><span style="width:14px;height:14px;border-radius:50%;border:2px solid #2E5A41"></span></span><h3 style="position:relative;font-family:\'Newsreader\',serif;font-weight:500;font-size:1.28rem;color:#1E3D5C;margin:0 0 8px">'+m[1]+'</h3><p style="position:relative;margin:0;font-size:.96rem;line-height:1.6;color:#5A5D57;max-width:90%">'+m[2]+'</p></div>';}).join(''));
+
+  var benefits=['Entender melhor o que você sente','Organizar pensamentos difíceis','Criar pausas durante o dia','Reduzir a sensação de estar perdido','Desenvolver uma rotina mais leve','Aprender exercícios simples de respiração','Identificar gatilhos emocionais','Diminuir a autocobrança','Começar um processo de autocuidado','Ter um material para consultar nos dias difíceis'];
+  fill('benefits', benefits.map(function(b){return '<div data-reveal style="display:flex;align-items:center;gap:14px;background:#FCFBF8;border:1px solid #EAE5D9;border-radius:14px;padding:18px 20px"><span style="flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#E7EEE7;display:inline-flex;align-items:center;justify-content:center">'+check+'</span><span style="font-size:1rem;color:#3A3D37;font-weight:500;line-height:1.45">'+b+'</span></div>';}).join(''));
+
+  var whoFor=['Você sente ansiedade com frequência','Você se sente emocionalmente cansado','Você tem pensamentos negativos repetitivos','Você sente dificuldade de organizar a rotina','Você quer entender melhor seus sentimentos','Você busca exercícios simples para começar','Você quer cuidar da mente com mais gentileza','Você sente que precisa de um ponto de partida'];
+  fill('whoFor', whoFor.map(function(w){return '<div data-reveal style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.72);border:1px solid #DCE6DC;border-radius:14px;padding:17px 20px"><span style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:#2E5A41;display:inline-flex;align-items:center;justify-content:center">'+checkLight+'</span><span style="font-size:1rem;color:#33362F;font-weight:500;line-height:1.45">'+w+'</span></div>';}).join(''));
+
+  var receive=['E-book completo em PDF','Acesso imediato após a compra','Exercícios práticos de autocuidado','Diário de pensamentos','Plano de rotina emocional','Checklist de hábitos leves','Técnicas de respiração','Material para ler no celular'];
+  fill('receive', receive.map(function(r){return '<div data-reveal style="display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px"><span style="flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C9DAC9;display:inline-flex;align-items:center;justify-content:center">'+checkNavy+'</span><span style="font-size:.98rem;color:#E4E9EC;font-weight:500;line-height:1.4">'+r+'</span></div>';}).join(''));
+
+  var bonuses=[['Bônus 1','Planner emocional de 7 dias','Um guia leve para acompanhar seus dias e sentimentos por uma semana.'],['Bônus 2','Exercícios de respiração','Lista de práticas curtas para momentos de tensão.'],['Bônus 3','Guia para momentos difíceis','Um passo a passo gentil para quando tudo parece demais.'],['Bônus 4','Checklist de autocuidado','Pequenos cuidados diários para manter o equilíbrio.']];
+  fill('bonuses', bonuses.map(function(b){return '<div data-reveal style="background:linear-gradient(165deg,#F4F6EF,#EAF1EC);border-radius:18px;padding:26px 24px;box-shadow:0 16px 34px rgba(0,0,0,.2)"><span style="font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#BC6A4A">'+b[0]+'</span><h3 style="font-family:\'Newsreader\',serif;font-weight:500;font-size:1.18rem;color:#1E3D5C;margin:10px 0 7px">'+b[1]+'</h3><p style="margin:0;font-size:.92rem;line-height:1.55;color:#5A5D57">'+b[2]+'</p></div>';}).join(''));
+
+  var testimonials=[['O e-book me ajudou a colocar em palavras coisas que eu nem sabia explicar.','Ana R.','https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&q=70&crop=faces&fit=crop'],['Gostei porque não promete milagre. É simples, direto e acolhedor.','Marcos C.','https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=70&crop=faces&fit=crop'],['Os exercícios de escrita me ajudaram a organizar melhor meus pensamentos.','Juliana P.','https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=70&crop=faces&fit=crop'],['Foi um bom ponto de partida para eu começar a cuidar mais da minha rotina.','Lucas T.','https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&q=70&crop=faces&fit=crop']];
+  fill('testimonials', testimonials.map(function(t){return '<div data-reveal class="card-h" style="background:#FCFBF8;border:1px solid #EAE5D9;border-radius:20px;padding:28px 26px;display:flex;flex-direction:column;gap:18px"><div style="display:flex;gap:3px"><span style="width:8px;height:8px;border-radius:50%;background:#BC6A4A"></span><span style="width:8px;height:8px;border-radius:50%;background:#BC6A4A"></span><span style="width:8px;height:8px;border-radius:50%;background:#BC6A4A"></span><span style="width:8px;height:8px;border-radius:50%;background:#BC6A4A"></span><span style="width:8px;height:8px;border-radius:50%;background:#BC6A4A"></span></div><p style="margin:0;font-size:1.05rem;line-height:1.6;color:#3A3D37;font-family:\'Newsreader\',serif;font-style:italic">“'+t[0]+'”</p><div style="display:flex;align-items:center;gap:12px;margin-top:auto"><img src="'+t[2]+'" alt="'+t[1]+'" loading="lazy" style="width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#E7EEE7"><div style="display:flex;flex-direction:column"><span style="font-size:.95rem;font-weight:700;color:#2B2A26">'+t[1]+'</span><span style="font-size:.8rem;color:#9A9D97">Leitor(a) verificado(a)</span></div></div></div>';}).join(''));
+
+  var offerIncludes=['E-book completo em PDF','Exercícios e diário de pensamentos','Plano de rotina emocional','Técnicas de respiração','Bônus inclusos'];
+  fill('offerIncludes', offerIncludes.map(function(o){return '<div style="display:flex;align-items:center;gap:11px"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#E7EEE7;display:inline-flex;align-items:center;justify-content:center">'+check+'</span><span style="font-size:.96rem;color:#3A3D37">'+o+'</span></div>';}).join(''));
+
+  var offerSeals=['Acesso imediato','Pagamento seguro','Material digital','Compra 100% online'];
+  fill('offerSeals', offerSeals.map(function(s){return '<span style="display:inline-flex;align-items:center;gap:6px;font-size:.82rem;color:#7A7D77;font-weight:500"><span style="width:5px;height:5px;border-radius:50%;background:#7A9A80"></span>'+s+'</span>';}).join(''));
+
+  // FAQ
+  var faqs=[['O e-book substitui terapia?','Não. Ele é um material de apoio e autocuidado, mas não substitui acompanhamento com psicólogo, psiquiatra ou profissional de saúde.'],['Quando recebo o e-book?','O acesso é digital e liberado logo após a confirmação da compra.'],['Posso ler pelo celular?','Sim, o material pode ser acessado pelo celular, tablet ou computador.'],['Esse material cura ansiedade ou depressão?','Não prometemos cura. O e-book oferece orientações, reflexões e exercícios que podem ajudar no autocuidado emocional.'],['É indicado para quem está em tratamento?','Pode ser usado como material complementar, sempre respeitando as orientações dos profissionais que acompanham você.'],['O conteúdo é difícil?','Não. A linguagem é simples, acolhedora e prática.'],['Tem exercícios?','Sim. O e-book traz exercícios de escrita, reflexão, respiração e organização da rotina.'],['Serve para qualquer idade?','O conteúdo é voltado principalmente para jovens e adultos.'],['Como funciona o pagamento?','O pagamento é feito online, de forma segura, pela plataforma escolhida no checkout.'],['E se eu estiver em crise?','O e-book não substitui ajuda imediata. Em situações de crise, procure apoio de pessoas próximas, atendimento profissional ou o serviço de emergência da sua região (no Brasil, CVV 188).']];
+  var faqList=document.getElementById('faq-list');
+  faqList.innerHTML=faqs.map(function(f,i){return '<div style="border-bottom:1px solid #EDE8DC"'+(i===faqs.length-1?' data-last':'')+'><button class="faq-q" data-i="'+i+'" aria-expanded="false" style="width:100%;text-align:left;background:transparent;border:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:\'Mulish\',sans-serif"><span style="font-size:1.04rem;font-weight:600;color:#2B2A26;line-height:1.4">'+f[0]+'</span><span class="faq-sign" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:#E7EEE7;color:#2E5A41;font-size:1.3rem;display:inline-flex;align-items:center;justify-content:center;line-height:1">+</span></button><div class="faq-a" style="overflow:hidden;max-height:0;transition:max-height .4s ease"><p style="margin:0;padding:0 24px 22px;font-size:1rem;line-height:1.65;color:#5A5D57">'+f[1]+'</p></div></div>';}).join('');
+  faqList.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded')==='true';
+      faqList.querySelectorAll('.faq-q').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        b.querySelector('.faq-sign').textContent='+';
+        b.nextElementSibling.style.maxHeight='0';
+      });
+      if(!open){
+        btn.setAttribute('aria-expanded','true');
+        btn.querySelector('.faq-sign').textContent='–';
+        var a=btn.nextElementSibling;
+        a.style.maxHeight=a.scrollHeight+'px';
+      }
+    });
+  });
+
+  // Mobile menu
+  var menuBtn=document.getElementById('menuBtn'), panel=document.getElementById('mobilePanel');
+  function closeMenu(){panel.style.maxHeight='0';menuBtn.setAttribute('aria-expanded','false');}
+  menuBtn.addEventListener('click',function(){
+    var open=menuBtn.getAttribute('aria-expanded')==='true';
+    if(open){closeMenu();}else{panel.style.maxHeight=panel.scrollHeight+'px';menuBtn.setAttribute('aria-expanded','true');}
+  });
+  panel.querySelectorAll('.mlink').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+  // Reveal on scroll
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var items = document.querySelectorAll('[data-reveal]');
+  if(reduce || !('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+  } else {
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el);});
+    setTimeout(function(){document.querySelectorAll('[data-reveal]:not(.in)').forEach(function(el){el.classList.add('in');});},4000);
+  }
+})();
+</script>
+</body>
+</html>
